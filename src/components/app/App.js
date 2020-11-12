@@ -9,12 +9,16 @@ import Main from '../main/Main';
 import About from '../about/About';
 import Skills from '../skills/Skills';
 import Works from '../works/Works';
+import ParticlesBackground from '../common/particles/Particles'
+
+import './App.scss';
 
 function App() {
   return (
+    <div>
     <Router>
       <Header />
-
+      
       <Switch>
         <Route exact path="/">
           <Main />
@@ -30,6 +34,8 @@ function App() {
         </Route>
       </Switch>
     </ Router>
+    <ParticlesBackground />
+    </div>
   );
 }
 

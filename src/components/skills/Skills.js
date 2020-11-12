@@ -1,6 +1,9 @@
 import React from 'react';
 import SkillCard from '../skill-card/SkillCard';
-import stek from '../../data/data'
+import Footer from '../footer/Footer';
+
+import ResponsiveSlider from '../common/slider/ResponsiveSlider'
+import { stek } from '../../data/data'
 
 import './Skills.scss';
 
@@ -16,9 +19,8 @@ function Skills() {
   return(   
     <div className="container">
       <h2>Skills</h2>
-      <div className="d-flex flex-wrap justify-content-center">
-        {currentStek}
-      </div>
+      <ResponsiveSlider content={currentStek}/>
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,98 @@
+.react-card-flip, .front, .back {
+  height: 100%;
+}
+
+.front, .back {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image-wrapper {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.work-title_back {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+.card-work {
+  padding: 10px;
+
+  &:hover{
+    transition: 0.5s ease;
+    box-shadow: 0 0 8px #888888;
+  }
+
+  &:nth-child(1) {
+    grid-row: 1/3;
+  }
+
+  &:nth-child(4) {
+    grid-row: 3/5;
+  }
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  list-style-type: none;
+}
+
+.features__item{
+  margin-right: 3em;
+}
+
+.features__item::before {
+  content: "\2022"; 
+  color:#888888; 
+  font-weight: bold; 
+  display: inline-block; 
+  width: 1em; 
+  margin-left: -2em; 
+}
+
+.work-link {
+  position: absolute;
+  bottom: 2px;
+  display: inline-block;
+  align-self: flex-end;
+  padding: 4px;
+  border: 1px solid #00bc8c;
+  border-radius: 3px;
+
+  &:hover {
+    text-decoration: none;
+    background-color: #00bc8c;
+    color: #303030;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .work-title_back {
+    font-size: 24px;
+  }
+
+  .card-work {
+    &:nth-child(4) {
+      grid-row: 5/7;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .back {
+    font-size: 12px;
+  }
+  .work-title_back {
+    font-size: 18px;
+  }
+}
+
