@@ -1,10 +1,29 @@
 @font-face {
   font-family: 'Roboto';
-  src: local('Roboto'), url('../../assets/fonts/Roboto-Regular.ttf') format('truetype');
+  src:  local('Roboto'), local('Roboto-Regular'),
+        url('../../assets/fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../../assets/fonts/Roboto-Regular.woff') format('woff'),
+        url('../../assets/fonts/Roboto-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Audiowide';
+  src: local('Audiowide Regular'), local('Audiowide-Regular'),
+       url('../../assets/fonts/Audiowide-Regular.woff2') format('woff2'),
+       url('../../assets/fonts/Audiowide-Regular.woff') format('woff'),
+       url('../../assets/fonts/Audiowide-Regular.ttf') format('truetype');
   font-style: normal;
   font-weight: normal;
 }
 
 * {
-  font-family: 'Roboto', cursive;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
 }

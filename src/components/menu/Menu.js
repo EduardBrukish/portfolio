@@ -4,29 +4,20 @@ import { menuSections } from '../../data/data';
 
 import './Menu.scss';
 
-function Menu() {
-  const [activeItem, setActiveItem] = useState('/');
+function Menu({activeMobileMenu, activateMobileMenu}) {
+  const [activeMenuItem, setActiveItem] = useState('main')
+  const activeMenuClasses = activeMobileMenu ? 'navigation-wrapper_active' : '';
+
+  function handleEvent(activeItem) {
+    setActiveItem(activeItem)
+    activateMobileMenu()
+  } 
+
   const menuItems = menuSections.map((item) => {
-    const routerPath = (item.section === 'main') ? '/' : '/' + item.section;
-    let classes = 'nav-link nav-text';
-    if(item.section === 'main' && activeItem ==='/' ) {
-      classes += ' active'
-    } else if( item.section === activeItem ) {
-      classes += ' active'
-    }
-
-    function eventHandler(menuName) {
-      const newActiveMenuItem = menuName.toLowerCase();
-      if(newActiveMenuItem === 'main') {
-        setActiveItem('/')
-      } else {
-        setActiveItem(newActiveMenuItem)
-      }
-    }
-
+    const activeClass = (activeMenuItem === item.section) ? "navigation__link_active" : "";
     return(  
-      <li className="nav-item" key={item.id} onClick={(event)=> eventHandler(event.target.innerText)}>
-        <Link to={routerPath} className={ classes }>
+      <li className="navigation__item" key={item.id}>
+        <Link to={item.path} onClick={(event) => handleEvent(event.target.innerText.toLowerCase())} className={`navigation__link ${activeClass}`}>
           {item.section}
         </Link>
       </li>
@@ -34,12 +25,10 @@ function Menu() {
   })
 
   return(
-    <nav className="navbar navbar-expand navbar-dark bg-dark">
-      <div className="collapse navbar-collapse" id="navbarColor02">
-        <ul className="navbar-nav mr-auto">
+    <nav className={`navigation-wrapper ${activeMenuClasses}`}>
+        <ul className="navigation">
           {menuItems}
         </ul>
-      </div>
     </nav>
   )
 }

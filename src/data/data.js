@@ -78,9 +78,9 @@ const works = [{name: "forkio",
                link: "https://eduardbrukish.github.io/virtual-keyboard/",
                features: ["Webpack", "JavaScript", "SASS", "HTML5", "Responsive"]}];
 
-const menuSections = [{section: "main", id: 1}, 
-                      {section: "works", id: 2}, 
-                      {section: "skills", id: 3}, 
-                      {section: "about", id: 4}];
+const menuSections = [{section: "main", id: 1, path: "/"}, 
+                      {section: "works", id: 2, path: "/works"}, 
+                      {section: "skills", id: 3, path: "/skills"}, 
+                      {section: "about", id: 4, path: "/about"}];
 
 export {stek, works, menuSections};

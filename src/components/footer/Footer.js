@@ -9,10 +9,10 @@ function Footer() {
       <div className="bg-dark d-flex justify-content-between align-items-center p-2">
         <h5 className="footer-title">© Eduard Brukish</h5>
         <div>
-          <a href="https://www.upwork.com/freelancers/~01523d8e8ba7509888?s=1110580755057594368" target="_blank">
+          <a href="https://www.upwork.com/freelancers/~01523d8e8ba7509888?s=1110580755057594368" target="_blank" rel="noreferrer">
             <SiUpwork className="link-icon"/>
           </a>
-          <a href="https://github.com/EduardBrukish" target="_blank">
+          <a href="https://github.com/EduardBrukish" target="_blank" rel="noreferrer">
             <SiGithub className="link-icon"/>
           </a>
         </div>

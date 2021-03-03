@@ -15,10 +15,8 @@ import './App.scss';
 
 function App() {
   return (
-    <div>
-    <Router>
+    <div className="wrapper">
       <Header />
-      
       <Switch>
         <Route exact path="/">
           <Main />
@@ -33,8 +31,7 @@ function App() {
           <Skills />
         </Route>
       </Switch>
-    </ Router>
-    <ParticlesBackground />
+      <ParticlesBackground />
     </div>
   );
 }

@@ -10,7 +10,7 @@ function WorkCard({title, description, linkPath, features}) {
     event.preventDefault()    
     changeFlip(!isFlipped)
   })
-  const imagePath = process.env.PUBLIC_URL + `/img/works/${title}.png`;
+  const imagePath = process.env.PUBLIC_URL + `/img/works/${title}.webp`;
 
   const workFeatures = features.map((feature, index) => {
     return( <li className="features__item" key={index}> {feature} </li>)
@@ -43,7 +43,7 @@ function WorkCard({title, description, linkPath, features}) {
                 {workFeatures}
               </ul>
             </div>
-          <a className="work-link" href={ linkPath } target="_blank">See original</a>
+          <a className="work-link" href={ linkPath } target="_blank" rel="noreferrer">See original</a>
           </div>
         </div>
       </div>

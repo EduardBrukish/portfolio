@@ -15,7 +15,7 @@ function Works() {
   });
   
   return(   
-    <div className="container">
+    <div className="container works">
       <h2>Works</h2>
       <div className="works-wrapper">
         {currentWorks}

@@ -17,7 +17,7 @@ function Skills() {
   })
 
   return(   
-    <div className="container">
+    <div className="container skills">
       <h2>Skills</h2>
       <ResponsiveSlider content={currentStek}/>
       <Footer />

@@ -24,7 +24,7 @@ function SkillCard({technology, level, description}) {
         <div>
           <h2 className="skill-title">{technology}</h2>
           <div className="image-wrapper">
-            <img src={process.env.PUBLIC_URL + `/img/skills/${technology}.svg`} className="skill-card_image"/>
+            <img src={process.env.PUBLIC_URL + `/img/skills/${technology}.svg`} className="skill-card_image" alt={`${technology}`}/>
           </div>
         </div>
       </div>

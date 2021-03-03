@@ -6,7 +6,9 @@ import './Particles.scss';
 function ParticlesBackground() {
   return(
     <Particles
-    canvasClassName="particles"
+		canvasClassName="particles"
+		width="100%"
+		height="100%"
     params={{
 	    "particles": {
 	        "number": {
